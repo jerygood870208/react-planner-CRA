@@ -162,6 +162,7 @@ class Project{
   }
 
   static updateMouseCoord(state, coords) {
+    // console.log('project updateMouseCoord: ', coords);
     state = state.set('mouse', new Map(coords));
 
     return { updatedState: state };

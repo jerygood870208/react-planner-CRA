@@ -21,8 +21,8 @@ const PlannerContainer = ({ plannerState }) => {
       {({ width, height }) => (
         <ReactPlanner
           catalog={MyCatalog}
-          width={1800}
-          height={900}
+          width={width}
+          height={height}
           plugins={plugins}
           toolbarButtons={toolbarButtons}
           stateExtractor={() => plannerState}

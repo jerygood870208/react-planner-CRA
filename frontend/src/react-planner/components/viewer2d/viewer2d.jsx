@@ -94,6 +94,7 @@ export default function Viewer2D(
 
 
   let { viewer2D, mode, scene } = state;
+  console.log(state);
 
   let layerID = scene.selectedLayer;
 
@@ -102,10 +103,13 @@ export default function Viewer2D(
   };
 
   let onMouseMove = viewerEvent => {
+    // console.log('viewerEvent:', viewerEvent);
+    // console.log('viewerEvent properties:', Object.keys(viewerEvent));
 
     //workaround that allow imageful component to work
     let evt = new Event('mousemove-planner-event');
     evt.viewerEvent = viewerEvent;
+    // console.log('viewer2d: ', viewerEvent);
     document.dispatchEvent(evt);
 
     let { x, y } = mapCursorPosition(viewerEvent);

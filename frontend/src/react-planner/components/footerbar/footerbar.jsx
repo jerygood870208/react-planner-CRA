@@ -58,7 +58,9 @@ export default class FooterBar extends Component {
   render() {
     let { state: globalState, width, height } = this.props;
     let { translator, projectActions } = this.context;
+
     let { x, y } = globalState.get('mouse').toJS();
+    console.log('footerbar: ', globalState.get('mouse'));
     let zoom = globalState.get('zoom');
     let mode = globalState.get('mode');
 

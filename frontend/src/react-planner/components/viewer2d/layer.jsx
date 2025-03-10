@@ -10,6 +10,7 @@ import {
 
 export default function Layer({ layer, scene, catalog }) {
 
+  console.log('Layer debug:', { layer, scene });
   let { unit, groups } = scene;
   let { lines, areas, vertices, holes, id: layerID, items, opacity } = layer;
 
